@@ -14,14 +14,15 @@ body {
   font-family: "Space Grotesk", sans-serif;
   background-color:#0f172a;
   color: #e5e7eb;
-  margin: 0;
+  margin: 0 auto;
   padding: 40px 18px;
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
   background-image:
-   linear-gradient(rgba(56,189,248,0.06) 1px, transparent 1px);
+  linear-gradient(rgba(56,189,248,0.06) 1px, transparent 1px),
+linear-gradient(90deg, rgba(56,189,248,0.06) 1px, transparent 1px);
    
 background-size: 32px 32px;
 } 
@@ -344,11 +345,11 @@ li {
   color:#38bdf8;
 }
 .projects-page .card h3{
-  color:2dd4bf;
+  color:#2dd4bf;
   margin-bottom:10px;
 }
 .projects-page .card p{
-  color:cbd5e1;
+  color:#cbd5e1;
   margin-bottom:12px;
 }
 .projects-page .card ul{
@@ -505,7 +506,7 @@ color:var(--accent);
   border:1px solid rgba(34,197,94,0.22);
   border-radius:8px;
   display:inline-block;
-  min-width:1400px
+  min-width:1400px; 
   font-family:monospace;
   white-space:pre;
   box-sizing:border-box;
@@ -520,7 +521,7 @@ color:var(--accent);
 	width:100%;
 	overflow-x:auto;
 	overflow-y:hidden;
-	-webkite-overflow-scrolling:touch;
+	-webkit-overflow-scrolling:touch;
 	touch-action:pan-x;
 	text-align:left;
 }
@@ -533,7 +534,7 @@ color:var(--accent);
   white-space:pre-wrap;
   border-right:2px solid #22c55e;
   min-height:3.5em;
-  vivibility:hidden;
+  visibility:hidden;
 }
 .typewriter.typing {
   animation:cursorBlink 0.8s step-end infinite;
@@ -552,7 +553,7 @@ border-color:transparent;
 }
 
  @media (min-width:900px){
-  .projekts{
+  .projects{
    grid-template-columns: 1fr 1fr;
   }
  }
@@ -588,7 +589,7 @@ border-color:transparent;
 }
 
 @media (max-width: 700px){
- .badge-grid{grid-template-columns:1 fr;}
+ .badge-grid{grid-template-columns:1fr;}
 }
 .badge.hardware {
  border-left: 4px solid #3b82f6;
@@ -622,7 +623,7 @@ border-color:transparent;
  }
 }
 
-@media(max-width: 768){
+@media(max-width: 768px){
 
  body{
   overflow-x:auto;
@@ -669,8 +670,8 @@ border-color:transparent;
 .project-grid{
 grid-template-columns:1fr;
 }
-.skill-grid, skills{
- grid-tempplate-columns:1fr;
+.skill-grid, .skills{
+ grid-template-columns:1fr;
 }
 .skill-box, .card.skills-section{
   width:100%;
@@ -702,6 +703,7 @@ grid-template-columns:1fr;
 		margin-left:0;
 		margin-right:0;
 		vertical-align:top;
+}
  .sql-result{
 	 display:inline-block;
 	 min-width:1400px;
@@ -711,7 +713,7 @@ grid-template-columns:1fr;
   .sql-result,
   .sql.typewriter,
   .sql-result pre{
-	font-size:13px
+	font-size:13px;
 	line-height:1.5;
   }
   .sql-card{
