@@ -704,7 +704,17 @@ grid-template-columns:1fr;
 	 display:inline-block;
 	 min-width:1400px;
 	 white-space:nowrap;
+	 padding:12px 14px;
  }
+  .sql-result,
+  .sql.typewriter,
+  .sql-result pre{
+	font-size:13px
+	line-height:1.5;
+  }
+  .sql-card{
+	  margin:10px 0;
+	  padding:
 }
  
 
