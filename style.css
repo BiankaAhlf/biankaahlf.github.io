@@ -613,7 +613,7 @@ border-color:transparent;
 @media(max-width: 768){
 
  body{
-  overflow-x:visible;
+  overflow-x:auto;
 }
  nav{
   display:flex;
