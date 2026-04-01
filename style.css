@@ -665,7 +665,7 @@ grid-template-columns:1fr;
   align-self:flex-end;
 }
 .card{
-  overflow:hidden;
+  overflow:visible;
 }
 .sql-inner{
   display:inline-block;
