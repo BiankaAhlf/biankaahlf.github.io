@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport"content="width=device-width,initial-scale=1.0">
+  <title>Anschreiben | Bianka Ahlf</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <link rel="stylesheet"href="bewerbung.css">
+</head>
+
+
+<body>
+
+ <section class="cv">
+
+  <header class="cv-header">
+   <div class="cv-left">
+    <h1>Bianka Ahlf</h1>
+    <p class="title">Berufliche orientierung im IT-Bereich</p>
+ </div>
+
+ <div class="contact-box">
+   <p><strong>Adresse:</strong> Blockmacherring 44,18109 Rostock</p>
+   <p><strong>Telefon:</strong> 015225476758</p>
+   <p><strong>E-Mail:</strong> ahlfb@web.de</p>
+  </div>
+ </div> 
+
+   <div class="cv-divider"></div>
+
+ <div class="anschreiben-section">
+  <h2 class="anschreiben-title">Anschreiben</h2>
+   <p><strong>Bewerbung um eine Praktikumsplatz im IT-Bereich</strong></p>
+  
+   <p>Sehr geehrte Damen und Herren,</p>
+
+   <p> hiermit bewerbe ich mich um die Möglichkeit eines Praktikums in Ihrem Unternehmen. 
+Im Rahmen meiner aktuellen beruflichen Orientierung im IT-Bereich suche ich Einblicke in praktische Arbeitsabläufe sowie die Umsetzung moderner technischer Lösungen.
+   </p>
+
+   <p> Zurzeit nehme ich an einer Maßnahme beim Berufsförderungswerk Stralsund (BFW) Außenstelle in Rostock teil mit dem Ziel einer Umschulung zum IT-Systemelektroniker.
+ Besonderes Interesse im IT-Bereich habe ich an  der Anwendungsentwicklung entwickelt.
+   </p>
+
+   <p>Mit Hilfe von KI baue ich mir Praktische Kenntisse auf und habe mir eine eigene Website mit HTML, CSS und JavaScript gebaut so wie erste kleine einblicke in SQL-Aufbau erlangt.
+Auch wenn ich derzeit noch am Anfang stehe, arbeite ich mich strukturiert in neue Themen ein und lege Wert darauf, Zusammenhänge zu verstehen. 
+   </p>
+
+   <p>Ein Praktikum bietet mir die Chance, neue Kenntnisse zu erlangen und zu vertiefen sowie praktische Erfahrungen zu sammeln und mich weiter zu entwickeln.
+   </p> 
+   
+   <p>Über die Gelegenheit, mich bei Ihnen vorzustellen, freue ich mich sehr.
+   </p> 
+
+  <div class="anschreiben-signature">
+      <p>Mit freundlichen Grüßen</p>
+    <p><strong>Bianka Ahlf</strong></p>
+  </div>
+
+
+   <footer class="cv-footer">
+    <p>Rostock, <span id="date"></span></p>
+  </footer>
+   </section>
+   
+   <div class="actions">
+    <a href="sql-cv.html" class="btn secondary">Zum Lebenslauf</a>
+    <a href="#" onclick="window.print()"class="btn">Als PDF speichern</a>
+   </div>
+  </div>
+
+<script>
+  const dateEl =
+ document.getElementById("date");
+ 
+  const today =new Date();
+
+  const formatted =
+ today.toLocaleDateString("de-DE", {
+   day: "numeric",
+   month: "long",
+   year: "numeric"
+});
+
+ dateEl.textContent = formatted;
+</script>
+
+ </body>
+</html>

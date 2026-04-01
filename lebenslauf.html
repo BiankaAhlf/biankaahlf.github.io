@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+ <meta charset="UTF8-8">
+ <meta name="viewport"content="width=device-width,initial-scale=1.0">
+ <title>Lebenslauf - Bianka Ahlf</title>
+ <link rel="stylesheet" href="bewerbung.css">
+</head>
+<body>
+
+ <main class="cv">
+
+  <header class="cv-header">
+
+   <div class="header-left">
+    <h1>Bianka Ahlf</h1>
+    <p class="title">Berufliche Orientierung im IT-Bereich</p>
+   </div>
+
+   <dic class="header-right">
+    <p><strong>Adresse:</strong>Blockmacherring 44, 18109 Rostock</p>
+    <p><strong>Telefon:</strong>015225476758</p>
+    <p><strong>E-Mail:</strong>ahlfb@web.de</p>
+    <p><strong>Geboren:</strong>22.03.1989 in Rostock</p>
+    <p><strong>Familienstand:</strong>ledig, 1 Kind</p>
+   </div>
+
+  </header>
+
+  <section class="cv-section">
+   <h2>Kurzprofil</h2>
+   <p>Motivierte Bewerberin mit wachsendem Interesse an IT, strukturiertem Arbeiten und 
+      technischer Problemlösung. Aktuell liegt mein Schwerpunkt auf beruflicher 
+      Orientierung im IT-Bereich sowie dem Ausbau praktischer Kenntnisse in SQL, 
+      Webentwicklung und digitaler Arbeitsweise.
+      Ziel ist die weitere Qualifizierung mit Perspektive auf IT-Systemelektroniker oder auch 
+      Anwendungsentwicklung.
+   </p>
+  </section>
+  
+ <section class="cv-section cv-skills-section">
+   <h2>Kenntnisse</h2>
+
+   <div class="skills">
+
+    <div class="skill-box">
+     <strong>Software</strong>
+     HTML/CSS/JavaScript (Grundlagen)<br>
+     SQL (Grundlagen)<br>
+     Microsoft Office
+    </div> 
+    
+    <div class="skill-box"> 
+     <strong>Aktuell</strong>
+      Erstellung einer eigenen Website mit Unterstützung von KI
+    </div>
+
+   <div class="skill-box">
+    <strong>Hardware & Elektronik</strong>
+     Grundkenntnisse in Elektronik<br>
+     Erfahrung mit Reparatur (z.B. Mainboard/Löten)
+   </div> 
+
+   <div class="skill-box">
+    <strong>Arbeitsweise</strong>
+     Analytisches Denken<br>
+     Hohe Lernbereitschaft<br>
+     Strukturierte Arbeitsweise
+   </div>
+
+   <div class="skill-box full">
+    <strong>Sonstiges</strong>
+     Führerscheinklasse B
+   </div>
+</div>
+</section>
+
+
+<div class="page-break"></div>
+
+
+  <section class="cv-section cv-career">
+   <h2>Beruflicher Werdegang</h2>
+
+   <div class="cv-item">
+   <div class="cv-date highlight">aktuell</div>
+    <div class="cv-content"><strong>Maßnahme beim Berufsförderungswerk (BFW)</strong><br>
+     Berufliche Orientierung im IT-Bereich mit dem Ziel einer Umschulung</div>
+</div>
+
+
+   <div class="cv-item">
+   <div class="cv-date highlight">Eigenständig</div>
+    <div class="cv-content"><strong>Aufbau praktischer IT-Kenntnisse</strong><br>
+     Erstellung und Strukturierung einer eigenen Website (HTML, CSS und javaScript)<br>
+     Erste Arbeiten mit SQL (Abfragen, Datenstruktur verstehen)</div>
+</div>
+
+    
+
+    <div class="cv-item">
+    <div class="cv-date highlight">geplant</div>
+     <div class="cv-content"><strong>Umschulung zur IT-Systemelektronikerin/Anwendungsentwicklerin</strong><br>
+Ziel: Vertiefung in Systemtechnik, Programmierung und praktische IT-Anwendungen.</div>
+</div>
+
+
+  <section class="cv-section">
+   <h2>Schulbildung</h2>
+
+   <div class="cv-item">
+    <div class="cv-date">08/1996 - 08/2000</div>
+    <div class="cv-content">
+     <strong>Sprachheilschule Lichtenhagen</strong><br>Rostock</div>
+</div>
+
+   <div class="cv-item">
+    <div class="cv-date">08/2000 - 04/2004</div>
+    <div class="cv-content">
+     <strong>Krusenstern-Gesamtschule</strong><br>Rostock Schmarl</div>
+</div>
+
+   <div class="cv-item">
+    <div class="cv-date">08/2004 - 08/2005</div>
+    <div class="cv-content">
+     <strong>Allgemeine Förderschule</strong><br>Bützow - Abgangszeugnis</div>
+</div>
+</section>
+
+ 
+  <section class="cv-section">
+   <div class="cv-footer">
+    <p>Rostock, <span id="date"></span></p>
+    <p><strong>Bianka Ahlf</strong></p>
+   </div>
+  </section>
+
+ </main>
+ 
+<div><a href="#" onclick="window.print()"class="btn">Als PDF speichern</a>
+</div>
+<script>
+  const dateEl =
+ document.getElementById("date");
+ 
+  const today =new Date();
+
+  const formatted =
+ today.toLocaleDateString("de-DE", {
+   day: "numeric",
+   month: "long",
+   year: "numeric"
+});
+
+ dateEl.textContent = formatted;
+</script>
+
+</body>
+</html>
