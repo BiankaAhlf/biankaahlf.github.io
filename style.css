@@ -516,12 +516,6 @@ color:var(--accent);
  font-family:monospace;
  color:#e5e7eb;
 }
-.sql-content{
-	display:inline-block;
-	min-width:1400px;
-	text-align:left;
-	margin-left:0;
-}
 .sql-scroll{
 	width:100%;
 	overflow-x:auto;
@@ -529,6 +523,10 @@ color:var(--accent);
 	-webkite-overflow-scrolling:touch;
 	touch-action:pan-x;
 	text-align:left;
+}
+.sql-content{
+	display:inline-block;
+	min-width:1400px;
 }
 .sql::before {
   content:">";
@@ -704,6 +702,10 @@ grid-template-columns:1fr;
    touch-action:pan-x;
   -webkit-overflow-scrolling:touch;
  }
+	.sql-content{
+		margin-left:0;
+		margin-right:0;
+		vertical-align:top;
  .sql-result{
 	 display:inline-block;
 	 min-width:1400px;
