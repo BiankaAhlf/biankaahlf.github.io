@@ -31,6 +31,7 @@ background-size: 32px 32px;
   z-index: 2;
 }
 .scan-layer{
+  pointer-events:none;	
   position:fixed;
   inset:0;
   pointer-events:none;
