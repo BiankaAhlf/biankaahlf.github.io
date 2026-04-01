@@ -675,7 +675,9 @@ grid-template-columns:1fr;
   white-space:pre;
 }
 .sql-scroll{
+   display:block
    width:100%;
+   max-width:100%;
    overflow-x:auto;
    overflow-y:hidden;
    touch-action:pan-x;
