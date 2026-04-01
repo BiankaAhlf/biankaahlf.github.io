@@ -509,6 +509,7 @@ color:var(--accent);
   font-family:monospace;
   white-space:pre;
   box-sizing:border-box;
+  text-align:left;
 }
 .sql-result pre{
  margin:0;
@@ -518,6 +519,8 @@ color:var(--accent);
 .sql-content{
 	display:inline-block;
 	min-width:1400px;
+	text-align:left;
+	margin-left:0;
 }
 .sql-scroll{
 	width:100%;
@@ -525,6 +528,7 @@ color:var(--accent);
 	overflow-y:hidden;
 	-webkite-overflow-scrolling:touch;
 	touch-action:pan-x;
+	text-align:left;
 }
 .sql::before {
   content:">";
@@ -714,7 +718,7 @@ grid-template-columns:1fr;
   }
   .sql-card{
 	  margin:10px 0;
-	  padding:
+  }
 }
  
 
