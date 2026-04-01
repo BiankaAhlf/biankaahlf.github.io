@@ -515,6 +515,10 @@ color:var(--accent);
  font-family:monospace;
  color:#e5e7eb;
 }
+.sql-content{
+	display:inline-block;
+	min-width:1400px;
+}
 .sql-scroll{
 	width:100%;
 	overflow-x:auto;
