@@ -687,7 +687,7 @@ grid-template-columns:1fr;
    touch-action:pan-x;
   -webkit-overflow-scrolling:touch;
  }
- .result{
+ .sql-result{
 	 display:inline-block;
 	 min-width:1400px;
 	 white-space:nowrap;
