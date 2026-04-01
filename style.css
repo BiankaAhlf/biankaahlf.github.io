@@ -523,11 +523,7 @@ color:var(--accent);
 	-webkite-overflow-scrolling:touch;
 	touch-action:pan-x;
 	text-align:left;
-}
-.sql-content{
-	display:inline-block;
-	min-width:1400px;
-}
+}
 .sql::before {
   content:">";
   color:#22c55e;
