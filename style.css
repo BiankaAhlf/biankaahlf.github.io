@@ -676,21 +676,21 @@ grid-template-columns:1fr;
 .card{
   overflow:visible;
 }
-.sql-inner{
-  display:inline-block;
-  min-width:1400px;
-}
 .sql-cv{
   white-space:pre;
 }
 .sql-scroll{
-   display:block
    width:100%;
    max-width:100%;
    overflow-x:auto;
    overflow-y:hidden;
    touch-action:pan-x;
   -webkit-overflow-scrolling:touch;
+ }
+ .result{
+	 display:inline-block;
+	 min-width:1400px;
+	 white-space:nowrap;
  }
 }
  
