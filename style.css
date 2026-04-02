@@ -515,15 +515,6 @@ color:var(--accent);
  font-family:monospace;
  color:#e5e7eb;
 }
-.sql-scroll{
-	width:100%;
-	overflow-x:auto;
-	overflow-y:hidden;
-	-webkit-overflow-scrolling:touch;
-	touch-action:pan-x;
-	text-align:left;
-}
-
 .sql::before {
   content:">";
   color:#22c55e;
