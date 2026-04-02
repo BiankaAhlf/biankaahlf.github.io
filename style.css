@@ -517,7 +517,7 @@ color:var(--accent);
 }
 .sql-scroll{
 	width:100%;
-	overflow-x:visible;
+	overflow-x:auto;
 	overflow-y:hidden;
 	-webkit-overflow-scrolling:touch;
 	touch-action:pan-x;
