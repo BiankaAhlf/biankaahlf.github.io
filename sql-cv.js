@@ -81,6 +81,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     step();
    }
+     function startBlock(index) {
+    const block = sqlBlocks[index];
+    const result = sqlResults[index];
+
+     if(!block ||block.dataset.started === "true") return;
+
+     block.dataset.started = "true";
+     block.style.opacity = "1";
+
+   typeHtml(block, 18, () => {
+    if (result) {
+     result.style.opacity = "1";
+     result.style.transform = "translateY(0)"; 
+    }
+   });
+  }
     function checkBlocksOnScroll() {
      sqlBlocks.forEach((block, index) => {
       if (block.dataset.started === "true") return;
