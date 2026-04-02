@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
    
    block.innerHTML ="";
 
-block.style.visibility = "hidden";
+block.style.opacity= "0";
 });
 
   sqlResults.forEach((result) => {
@@ -90,7 +90,7 @@ block.style.visibility = "hidden";
      if(!block ||block.dataset.started === "true") return;
 
      block.dataset.started = "true";
-     block.style.visibility = "visible";
+     block.style.opacity = "1";
 
    typeHtml(block, 18, () => {
     if (result) {
@@ -114,6 +114,6 @@ block.style.visibility = "hidden";
 
   window.addEventListener("scroll", checkBlocksOnScroll);
   window.addEventListener("resize", checkBlocksOnScroll);
-
+  startBlock(0);
  checkBlocksOnScroll();
 });
