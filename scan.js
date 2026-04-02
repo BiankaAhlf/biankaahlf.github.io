@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  const eggTarget = "eastereggs";
+  const eggTarget = "console";
    let eggProgress = "";
 
  document.querySelectorAll(".easter-letter").forEach((letter) =>{
