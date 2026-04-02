@@ -6,11 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
  
   sqlBlocks.forEach((block) => {
    block.dataset.source = block.innerHTML;
-   
    block.innerHTML ="";
-
-block.style.opacity= "0";
-});
+   block.style.opacity= "0";
+   block.style.transition="opacity 0.2s ease;
+  });
 
   sqlResults.forEach((result) => {
    result.style.opacity = "0";
@@ -82,23 +81,6 @@ block.style.opacity= "0";
 
     step();
    }
-
-   function startBlock(index) {
-    const block = sqlBlocks[index];
-    const result = sqlResults[index];
-
-     if(!block ||block.dataset.started === "true") return;
-
-     block.dataset.started = "true";
-     block.style.opacity = "1";
-
-   typeHtml(block, 18, () => {
-    if (result) {
-     result.style.opacity = "1";
-     result.style.transform = "translateY(0)"; 
-    }
-   });
-  }
     function checkBlocksOnScroll() {
      sqlBlocks.forEach((block, index) => {
       if (block.dataset.started === "true") return;
