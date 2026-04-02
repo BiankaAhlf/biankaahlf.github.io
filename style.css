@@ -517,7 +517,7 @@ color:var(--accent);
 }
 .sql-scroll{
 	width:100%;
-	overflow-x:auto;
+	overflow-x:visible;
 	overflow-y:hidden;
 	-webkit-overflow-scrolling:touch;
 	touch-action:pan-x;
@@ -533,7 +533,11 @@ color:var(--accent);
   white-space:pre-wrap;
   border-right:2px solid #22c55e;
   min-height:3.5em;
-  visibility:hidden;
+  opacity:0;
+  transition:opacity 0.2s ease;
+}
+.typewriter.is-visible{
+  opacity:1;
 }
 .typewriter.typing {
   animation:cursorBlink 0.8s step-end infinite;
