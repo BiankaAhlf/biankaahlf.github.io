@@ -33,18 +33,18 @@
       <div class="sql-content">
 
         <!-- BLOCK 1 -->
-        <pre class="sql typewriter">
--- Verbindung zur Datenbank herstellen
-USE bianka_ahlf_cv;
+       <pre class="sql typewriter">
+<span class="sql-comment">-- Verbindung zur Datenbank herstellen</span>
+<span class="sql-keyword">USE</span> <span class="sql-table">bianka_ahlf_cv</span>;
 
--- Persönliche Daten
-SELECT
+<span class="sql-comment">-- Persönliche Daten</span>
+<span class="sql-keyword">SELECT</span>
   name, birth_date, city, email, phone
-FROM personal_data
-WHERE name = 'Bianka Ahlf';
-        </pre>
+<span class="sql-keyword">FROM</span> <span class="sql-table">personal_data</span>
+<span class="sql-keyword">WHERE</span> name = <span class="sql-string">'Bianka Ahlf'</span>;
+</pre>
 
-        <div class="sql-result">
+<div class="sql-result">
 +-----------+--------------+
 | field     | value        |
 +-----------+--------------+
@@ -54,7 +54,8 @@ WHERE name = 'Bianka Ahlf';
 | email     | ahlfb@web.de |
 | phone     | 015225476758 |
 +-----------+--------------+
-        </div>
+</div>
+
 
         <!-- BLOCK 2 -->
         <pre class="sql typewriter">
