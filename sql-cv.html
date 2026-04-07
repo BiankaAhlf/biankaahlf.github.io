@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta charset="UTF-8">
- <title>SQL Lebenslauf</title>
- <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>SQL Lebenslauf</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -13,59 +13,59 @@
 <div class="scan-layer"></div>
 <div class="page-content">
 
-<nav>
- <a href="index.html">Start</a>
- <a href="skills.html">Kenntnisse</a>
- <a href="projects.html">Projekte</a>
- <a class="active" href="sql-cv.html">SQL-CV</a>
-</nav>
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="skills.html">Kenntnisse</a>
+    <a href="projects.html">Projekte</a>
+    <a class="active" href="sql-cv.html">SQL-CV</a>
+  </nav>
 
-<div class="card">
- <h1>Lebenslauf als SQL</h1>
-</div>
+  <div class="card">
+    <h1>Lebenslauf als SQL</h1>
+  </div>
 
-<a class="status" href="/lebenslauf.html" target="_blank">
- <span class="status-dot"></span>Lebenslauf ansehen
-</a>
+  <a class="status" href="/lebenslauf.html" target="_blank">
+    <span class="status-dot"></span>Lebenslauf ansehen
+  </a>
 
-<div class="sql-card">
-<div class="sql-scroll">
-<div class="sql-content">
+  <div class="sql-card">
+    <div class="sql-scroll">
+      <div class="sql-content">
 
-<!-- BLOCK 1 -->
-<pre class="sql typewriter">
+        <!-- BLOCK 1 -->
+        <pre class="sql typewriter">
 -- Verbindung zur Datenbank herstellen
 USE bianka_ahlf_cv;
 
 -- Persönliche Daten
 SELECT
- name, birth_date, city, email, phone
+  name, birth_date, city, email, phone
 FROM personal_data
 WHERE name = 'Bianka Ahlf';
-</pre>
+        </pre>
 
-<div class="sql-result">
+        <div class="sql-result">
 +-----------+--------------+
-| field     |  value       |
+| field     | value        |
 +-----------+--------------+
-| name      | Bianka Ahlf  |  
+| name      | Bianka Ahlf  |
 | birth_date| 22.03.1989   |
-| city      | Rostock      |  
+| city      | Rostock      |
 | email     | ahlfb@web.de |
 | phone     | 015225476758 |
 +-----------+--------------+
-</div>
+        </div>
 
-<!-- BLOCK 2 -->
-<pre class="sql typewriter">
+        <!-- BLOCK 2 -->
+        <pre class="sql typewriter">
 -- Schulbildung
 SELECT
- period, institution, qualification
+  period, institution, qualification
 FROM education
 ORDER BY period ASC;
-</pre>
+        </pre>
 
-<div class="sql-result">
+        <div class="sql-result">
 +--------------------+-----------------------------------------+
 | period             | institution                             |
 +--------------------+-----------------------------------------+
@@ -73,60 +73,60 @@ ORDER BY period ASC;
 | 08/2000 - 04/2004  | Krusenstern Gesamtschule Rostock        |
 | 08/2004 - 08/2005  | Allgemeine Förderschule Bützow          |
 +--------------------+-----------------------------------------+
-</div>
+        </div>
 
-<!-- BLOCK 3 -->
-<pre class="sql typewriter">
+        <!-- BLOCK 3 -->
+        <pre class="sql typewriter">
 -- Berufsausbildung
 SELECT
- period, institution, qualification
+  period, institution, qualification
 FROM vocation_training;
-</pre>
+        </pre>
 
-<div class="sql-result">
+        <div class="sql-result">
 +--------------------+------------------------+-----------------------------------+
 | period             | institution            | qualification                     |
 +--------------------+------------------------+-----------------------------------+
 | 09/2005 - 08/2006  | Start GmbH Bützow      | Berufsvorbereitendes Jahr – Maler |
 | 09/2006 - 08/2008  | BilSE Institut         | Fachkraft im Gastgewerbe (IHK)    |
 +--------------------+------------------------+-----------------------------------+
-</div>
+        </div>
 
-<!-- BLOCK 4 -->
-<pre class="sql typewriter">
+        <!-- BLOCK 4 -->
+        <pre class="sql typewriter">
 -- Beruflicher Werdegang
 SELECT
- period, institution, qualification
+  period, institution, qualification
 FROM career_steps
 WHERE qualification IS NOT NULL;
-</pre>
+        </pre>
 
-<div class="sql-result">
-+--------------------+----------------------------------------+-----------------------------------+
-| period             | institution                            | qualification                     |
-+--------------------+----------------------------------------+-----------------------------------+
-| 12/2009 - 12/2009  | BgH-Bildungsgesellschaft Hähnlein mbH  |                                   |
-| 04/2010 - 06/2010  | IBS - Institut für Berufliche Schulung | Lotse - Bewerbungsmanagement      |
-| 10/2011 - 12/2012  | IBS - Institut für Berufliche Schulung | Lotse - Bewerbungsmanagement      |
-| 08/2015 - 02/2016  | IBS - Institut für Berufliche Schulung | Praxiscenter Plus II              |
-| 11/2017 - 07/2020  | Elternzeit                             |                                   |
-| 07/2020 - 10/2020  | IBS - Institut für Berufliche Schulung | Eignungsfeststellung              |
-| 02/2022 - 08/2022  | Grone                                  | Berufliche Eingliederung          |
-| 09/2023 - 11/2023  | Bilse Institut                         | Berufliche Orientierung           |
-| 06/2025 - 07/2025  | BfW Stralsund                          | Reha-Assessment / Orientierung    |
-| seit 09/2025       | BfW Stralsund                          | Berufliche Orientierung & Training|
-+--------------------+----------------------------------------+-----------------------------------+
-</div>
+        <div class="sql-result">
++--------------------+------------------------------------------+-----------------------------------+
+| period             | institution                              | qualification                     |
++--------------------+------------------------------------------+-----------------------------------+
+| 12/2009 - 12/2009  | BgH-Bildungsgesellschaft Hähnlein mbH    |                                   |
+| 04/2010 - 06/2010  | IBS - Institut für Berufliche Schulung   | Lotse - Bewerbungsmanagement      |
+| 10/2011 - 12/2012  | IBS - Institut für Berufliche Schulung   | Lotse - Bewerbungsmanagement      |
+| 08/2015 - 02/2016  | IBS - Institut für Berufliche Schulung   | Praxiscenter Plus II              |
+| 11/2017 - 07/2020  | Elternzeit                               |                                   |
+| 07/2020 - 10/2020  | IBS - Institut für Berufliche Schulung   | Eignungsfeststellung              |
+| 02/2022 - 08/2022  | Grone                                    | Berufliche Eingliederung          |
+| 09/2023 - 11/2023  | Bilse Institut                           | Berufliche Orientierung           |
+| 06/2025 - 07/2025  | BfW Stralsund                            | Reha-Assessment / Orientierung    |
+| seit 09/2025       | BfW Stralsund                            | Berufliche Orientierung & Training|
++--------------------+------------------------------------------+-----------------------------------+
+        </div>
 
-<!-- BLOCK 5 -->
-<pre class="sql typewriter">
+        <!-- BLOCK 5 -->
+        <pre class="sql typewriter">
 -- Kenntnisse
 SELECT
- category, value
+  category, value
 FROM skills;
-</pre>
+        </pre>
 
-<div class="sql-result">
+        <div class="sql-result">
 +---------------------------+--------------------------+
 | category                  | value                    |
 +---------------------------+--------------------------+
@@ -136,15 +136,58 @@ FROM skills;
 | Englisch                  | Grundkenntnisse          |
 | Führerschein              | Klasse B                 |
 +---------------------------+--------------------------+
-</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 </div>
-</div>
-</div>
 
+<!-- Auto-Highlight Script -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const KEYWORDS = [
+    "SELECT","FROM","WHERE","JOIN","LEFT JOIN","RIGHT JOIN","INNER JOIN",
+    "GROUP BY","ORDER BY","LIMIT","ASC","DESC","INSERT","INTO","VALUES",
+    "UPDATE","SET","DELETE","CREATE","TABLE","USE"
+  ];
+
+  function highlightSQL(text) {
+
+    // Kommentare
+    text = text.replace(/(--.*?$)/gm, '<span class="sql-comment">$1</span>');
+
+    // Strings
+    text = text.replace(/'([^']*)'/g, "<span class='sql-string'>'$1'</span>");
+
+    // Keywords
+    KEYWORDS.forEach(kw => {
+      const regex = new RegExp("\\b" + kw + "\\b", "gi");
+      text = text.replace(regex, `<span class="sql-keyword">${kw}</span>`);
+    });
+
+    // Tabellen (einfacher Ansatz)
+    text = text.replace(/\b([a-z_][a-z0-9_]{2,})\b/gi, (match) => {
+      if (KEYWORDS.includes(match.toUpperCase())) return match;
+      if (match.startsWith("'")) return match;
+      return `<span class="sql-table">${match}</span>`;
+    });
+
+    return text;
+  }
+
+  document.querySelectorAll("pre.sql").forEach(block => {
+    block.innerHTML = highlightSQL(block.innerHTML);
+  });
+
+});
+</script>
 
 <script src="sql-cv.js"></script>
 <script src="scan.js"></script>
 
 </body>
 </html>
+
