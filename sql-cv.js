@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
  document.querySelectorAll(".sql-result");
  
   sqlBlocks.forEach((block) => {
-   block.dataset.source = block.innerHTML;
+   block.dataset.source = block.innerHTML.replace(/"/g, '&quot;');
    block.innerHTML ="";
    block.style.opacity= "0";
-   block.style.transition="opacity 0.2s ease;
+   block.style.transition= "opacity 0.2s ease";
   });
 
   sqlResults.forEach((result) => {
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (block.dataset.started === "true") return;
      
       const rect = block.getBoundingClientRect();
-      const triggerLine = window.innerHeight * 0.6;
+      const triggerLine = window.innerHeight * 0.9;
  
       if (rect.top <= triggerLine && rect.bottom > 0) {
      startBlock(index);
