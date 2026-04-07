@@ -483,18 +483,28 @@ color:var(--accent);
   white-space:pre-wrap;
 }
 .sql-keyword {
-  color:#38bdf8;
-  font-weight:600;
+  color: #38bdf8;
+  font-weight: 700;
+  text-shadow: 0 0 6px rgba(56,189,248,0.35);
 }
+
 .sql-table {
-  color:#22c55e;
+  color: #22c55e;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(34,197,94,0.35);
 }
+
 .sql-string {
-  color:#fbbf24;
+  color: #fbbf24;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(251,191,36,0.35);
 }
+
 .sql-comment {
-  color:#64748b;
-  font-style:italic;
+  color: #94a3b8;
+  font-style: italic;
+  opacity: 0.85;
+}
 }
 .sql-result {
   color:#e5e7eb;
