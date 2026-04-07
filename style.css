@@ -708,9 +708,11 @@ grid-template-columns:1fr;
 		vertical-align:top;
 }
  .sql-result{
-	 display:inline-block;
+	 white-space:pre;
 	 min-width:1400px;
-	 white-space:nowrap;
+	 font-family:monospace
+	 overflow-x:auto;
+	 display:block;
 	 padding:12px 14px;
  }
   .sql-result,
