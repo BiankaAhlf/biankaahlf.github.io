@@ -142,6 +142,46 @@ FROM skills;
 </div>
 </div>
 
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const KEYWORDS = [
+    "SELECT","FROM","WHERE","JOIN","LEFT JOIN","RIGHT JOIN","INNER JOIN",
+    "GROUP BY","ORDER BY","LIMIT","ASC","DESC","INSERT","INTO","VALUES",
+    "UPDATE","SET","DELETE","CREATE","TABLE","USE"
+  ];
+
+  function highlightSQL(text) {
+
+    // Kommentare
+    text = text.replace(/(--.*?$)/gm, '<span class="sql-comment">$1</span>');
+
+    // Strings
+    text = text.replace(/'([^']*)'/g, "<span class='sql-string'>'$1'</span>");
+
+    // Keywords
+    KEYWORDS.forEach(kw => {
+      const regex = new RegExp("\\b" + kw + "\\b", "gi");
+      text = text.replace(regex, `<span class="sql-keyword">${kw}</span>`);
+    });
+
+    // Tabellen (einfacher Ansatz)
+    text = text.replace(/\b([a-z_]{3,})\b(?=\s*;|\s|$)/gi, (match) => {
+      if (KEYWORDS.includes(match.toUpperCase())) return match;
+      if (match.startsWith("'")) return match;
+      return `<span class="sql-table">${match}</span>`;
+    });
+
+    return text;
+  }
+
+  document.querySelectorAll("pre.sql").forEach(block => {
+    block.innerHTML = highlightSQL(block.innerHTML);
+  });
+
+});
+</script>
+
 <script src="sql-cv.js"></script>
 <script src="scan.js"></script>
 
