@@ -1,117 +1,146 @@
+
 document.addEventListener("DOMContentLoaded", () => {
-  const sqlBlocks =
- document.querySelectorAll(".typewriter");
-  const sqlResults =
- document.querySelectorAll(".sql-result");
- 
+  const sqlBlocks = document.querySelectorAll(".typewriter");
+  const sqlResults = document.querySelectorAll(".sql-result");
+
+  // -------------------------------------------------------
+  //  Initial Setup
+  // -------------------------------------------------------
   sqlBlocks.forEach((block) => {
-   block.dataset.source = block.innerHTML.replace(/"/g, '&quot;');
-   block.innerHTML ="";
-   block.style.opacity= "0";
-   block.style.transition= "opacity 0.2s ease";
+    block.dataset.source = block.innerHTML;
+    block.innerHTML = "";
+    block.style.opacity = "0";
+    block.style.transition = "opacity 0.2s ease";
   });
 
   sqlResults.forEach((result) => {
-   result.style.opacity = "0";
-   result.style.transform = "translateY(8px)";
-   result.style.transition="opacity 0.4s ease, transform 0.4s ease";
-});
+    result.style.opacity = "0";
+    result.style.transform = "translateY(8px)";
+    result.style.transition = "opacity 0.4s ease, transform 0.4s ease";
+  });
 
-   let index = 0;
+  // -------------------------------------------------------
+  //  TYPEWRITER (optimiert & performant)
+  // -------------------------------------------------------
+  function typeHtml(element, speed, done) {
+    const originalHtml = element.dataset.source || "";
 
-   function typeHtml(element, speed, done) {
-    const originalHtml = element.dataset.source||"";
-    const tempText = document.createElement("div");
-    tempText.innerHTML = originalHtml;
-    const originalText = tempText.textContent||"";
+    // HTML einmal parsen
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = originalHtml;
 
-   element.innerHTML = "";
-   element.classList.add("typing");
-  
-  let i = 0;
-
-  function rebuildPartialHtml (sourceHtml, visibleChars) {
-   const temp=
-  document.createElement("div");
-   temp.innerHTML = sourceHtml;
-
-  let count = 0;
-
-  function walk(node){
-   if (node.nodeType === Node.TEXT_NODE) {
-    const full = node.textContent || "";
-    if (count >= visibleChars) {
-     node.textContent = "";
-    }else if (count + full.length > visibleChars)
-{
-     node.textContent = full.slice (0, visibleChars - count);
-     count = visibleChars;
-    } else {
-      count += full.length;
-     }
-    } else if (node.nodeType === Node.ELEMENT_NODE) {
-    Array.from(node.childNodes).forEach(walk);
-     }
+    // Textknoten sammeln
+    const textNodes = [];
+    function collect(node) {
+      if (node.nodeType === Node.TEXT_NODE) {
+        textNodes.push(node);
+      } else {
+        node.childNodes.forEach(collect);
+      }
     }
-   
-    Array.from(temp.childNodes).forEach(walk);
-     return temp.innerHTML;
-   }
+    collect(wrapper);
 
-   function step () {
-    if (i <= originalText.length) {
-     element.innerHTML = rebuildPartialHtml(originalHtml, i);
-     i++;
+    // Gesamten Text extrahieren
+    const fullText = textNodes.map(n => n.textContent).join("");
 
-    let delay = speed + Math.random() * 40;
-   
-    if (
-     originalText.slice(0, i).endsWith("SELECT") ||
-     originalText.slice(0, i).endsWith("FROM") ||
-     originalText.slice(0, i).endsWith("WHERE") 
-   ) {
-    delay += 200;
-  }
-     setTimeout(step, delay);
-    } else {
-      element.classList.remove("typing");
-      if (done) done();
-     }
+    let charIndex = 0;
+    element.innerHTML = "";
+    element.classList.add("typing");
+
+    // HTML-Struktur in das Ziel kopieren
+    element.appendChild(wrapper.cloneNode(true));
+
+    // Live-Textknoten im Ziel sammeln
+    const liveNodes = [];
+    function collectLive(node) {
+      if (node.nodeType === Node.TEXT_NODE) {
+        liveNodes.push(node);
+      } else {
+        node.childNodes.forEach(collectLive);
+      }
+    }
+    collectLive(element);
+
+    // Alle Textknoten leeren
+    liveNodes.forEach(n => n.textContent = "");
+
+    function step() {
+      if (charIndex > fullText.length) {
+        element.classList.remove("typing");
+        if (done) done();
+        return;
+      }
+
+      let remaining = charIndex;
+      liveNodes.forEach((node, i) => {
+        const original = textNodes[i].textContent;
+        if (remaining <= 0) {
+          node.textContent = "";
+        } else if (remaining < original.length) {
+          node.textContent = original.slice(0, remaining);
+          remaining = 0;
+        } else {
+          node.textContent = original;
+          remaining -= original.length;
+        }
+      });
+
+      charIndex++;
+
+      // Natürlichere Tippgeschwindigkeit
+      let delay = speed + Math.random() * 40;
+
+      // SQL Keyword Pause
+      const lastWord = fullText.slice(0, charIndex).trim().split(/\s+/).pop().toUpperCase();
+      if (["SELECT", "FROM", "WHERE", "JOIN", "GROUP", "ORDER"].includes(lastWord)) {
+        delay += 200;
+      }
+
+      setTimeout(step, delay);
     }
 
     step();
-   }
-     function startBlock(index) {
+  }
+
+  // -------------------------------------------------------
+  //  Start eines Blocks
+  // -------------------------------------------------------
+  function startBlock(index) {
     const block = sqlBlocks[index];
     const result = sqlResults[index];
 
-     if(!block ||block.dataset.started === "true") return;
+    if (!block || block.dataset.started === "true") return;
 
-     block.dataset.started = "true";
-     block.style.opacity = "1";
+    block.dataset.started = "true";
+    block.style.opacity = "1";
 
-   typeHtml(block, 18, () => {
-    if (result) {
-     result.style.opacity = "1";
-     result.style.transform = "translateY(0)"; 
-    }
-   });
-  }
-    function checkBlocksOnScroll() {
-     sqlBlocks.forEach((block, index) => {
-      if (block.dataset.started === "true") return;
-     
-      const rect = block.getBoundingClientRect();
-      const triggerLine = window.innerHeight * 0.9;
- 
-      if (rect.top <= triggerLine && rect.bottom > 0) {
-     startBlock(index);
-    }
-   });
+    typeHtml(block, 18, () => {
+      if (result) {
+        result.style.opacity = "1";
+        result.style.transform = "translateY(0)";
+      }
+    });
   }
 
-  window.addEventListener("scroll", checkBlocksOnScroll);
-  window.addEventListener("resize", checkBlocksOnScroll);
+  // -------------------------------------------------------
+  //  Automatischer Start beim Scrollen
+  //  (Block muss vollständig sichtbar sein)
+  // -------------------------------------------------------
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio === 1) { 
+        const index = Array.from(sqlBlocks).indexOf(entry.target);
+        startBlock(index);
+        observer.unobserve(entry.target); // nur einmal starten
+      }
+    });
+  }, {
+    threshold: 1.0 // Block muss zu 100% sichtbar sein
+  });
+
+  // Alle Blöcke beobachten
+  sqlBlocks.forEach(block => observer.observe(block));
+
+  // Ersten Block sofort starten
   startBlock(0);
- checkBlocksOnScroll();
 });
