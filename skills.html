@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Kenntnisse | Bianka Ahlf</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,233 +16,454 @@
 
 <div class="page-content">
 
-<nav>
-  <a href="index.html">Start</a>
-  <a class="active" aria-current="page" href="skills.html">Kenntnisse</a>
-  <a href="projects.html">Projekte</a>
-  <a href="sql-cv.html">SQL-CV</a>
-</nav>
+  <nav>
+    <a href="index.html">Start</a>
+    <a class="active" aria-current="page" href="skills.html">Kenntnisse</a>
+    <a href="projects.html">Projekte</a>
+    <a href="sql-cv.html">SQL-CV</a>
+  </nav>
 
-<div class="card skills-intro">
-  <h1>Kenntnisse</h1>
-  <p class="muted">
-    Mein aktueller Lernstand: praktische Erfahrungen, Grundlagen und erste
-    Einblicke aus Homelab, PC-Aufbereitung und eigenen Projekten.
-  </p>
-  <p>
-    Die Balken zeigen meine persönliche Einschätzung meines Lernfortschritts,
-    keine geprüften Kompetenzwerte.
-  </p>
+
+  <!-- EINLEITUNG -->
+  <div class="card skills-intro">
+
+    <h1>Kenntnisse</h1>
+
+    <p class="muted">
+      Mein aktueller Lernstand: praktische Erfahrungen, Grundlagen und erste
+      Einblicke aus Homelab, PC-Aufbereitung und eigenen Projekten.
+    </p>
+
+    <p>
+      Die Balken zeigen meine persönliche Einschätzung meines Lernfortschritts,
+      keine geprüften Kompetenzwerte.
+    </p>
+
+  </div>
+
+
+  <!-- KARTENRASTER -->
+  <div class="skills-overview">
+
+
+    <!-- WINDOWS & LINUX -->
+    <section class="card">
+
+      <h3>Windows &amp; Linux</h3>
+
+      <p>
+        Praktische Erfahrungen beim Einrichten und Untersuchen von Systemen.
+      </p>
+
+      <ul>
+        <li>
+          Windows installieren und einrichten; Treiber- und Startprobleme
+          untersuchen.
+        </li>
+
+        <li>
+          Linux installieren und einrichten; erste Arbeiten im Terminal
+          und über SSH.
+        </li>
+
+        <li>
+          Fehlermeldungen auswerten und Änderungen schrittweise prüfen.
+        </li>
+      </ul>
+
+
+      <div class="skill">
+
+        <div class="skill-header">
+          <span class="skill-name">Windows Troubleshooting</span>
+          <span class="skill-percent">80%</span>
+        </div>
+
+        <div class="skill-bar"
+             role="meter"
+             aria-valuemin="0"
+             aria-valuemax="100"
+             aria-valuenow="80">
+
+          <div class="skill-fill software"
+               style="width:80%"
+               data-width="80%"></div>
+
+        </div>
+
+      </div>
+
+
+      <div class="skill">
+
+        <div class="skill-header">
+          <span class="skill-name">Linux</span>
+          <span class="skill-percent">40%</span>
+        </div>
+
+        <div class="skill-bar"
+             role="meter"
+             aria-valuemin="0"
+             aria-valuemax="100"
+             aria-valuenow="40">
+
+          <div class="skill-fill software"
+               style="width:40%"
+               data-width="40%"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VIRTUALISIERUNG & SERVERDIENSTE -->
+    <section class="card">
+
+      <h3>Virtualisierung &amp; Serverdienste</h3>
+
+      <p>
+        Im eigenen Homelab lerne ich, virtuelle Systeme und Dienste
+        einzurichten und zu betreiben.
+      </p>
+
+      <ul>
+        <li>
+          Proxmox, virtuelle Maschinen (VMs) und LXC-Container.
+        </li>
+
+        <li>
+          Backups, Speicherverwaltung und Fehlerbehebung.
+        </li>
+
+        <li>
+          Pi-hole, Jellyfin und Samba einrichten, aktualisieren
+          und untersuchen.
+        </li>
+      </ul>
+
+
+      <div class="skill">
+
+        <div class="skill-header">
+          <span class="skill-name">Proxmox / VMs / LXC</span>
+          <span class="skill-percent">45%</span>
+        </div>
+
+        <div class="skill-bar"
+             role="meter"
+             aria-valuemin="0"
+             aria-valuemax="100"
+             aria-valuenow="45">
+
+          <div class="skill-fill software"
+               style="width:45%"
+               data-width="45%"></div>
+
+        </div>
+
+      </div>
+
+
+      <div class="skill">
+
+        <div class="skill-header">
+          <span class="skill-name">Serverdienste / Self-Hosting</span>
+          <span class="skill-percent">45%</span>
+        </div>
+
+        <div class="skill-bar"
+             role="meter"
+             aria-valuemin="0"
+             aria-valuemax="100"
+             aria-valuenow="45">
+
+          <div class="skill-fill software"
+               style="width:45%"
+               data-width="45%"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NETZWERK & VPN -->
+    <section class="card">
+
+      <h3>Netzwerk &amp; VPN</h3>
+
+      <p>
+        Grundlagen und praktische Erfahrungen aus der Arbeit
+        am eigenen Netzwerk.
+      </p>
+
+      <ul>
+        <li>
+          IP-Adressen, DNS und Verbindungen zwischen Geräten und Diensten.
+        </li>
+
+        <li>
+          WireGuard einrichten und Verbindungsprobleme untersuchen.
+        </li>
+
+        <li>
+          Erreichbarkeit mit Ping und Traceroute prüfen;
+          erste Einblicke in Routing und NAT.
+        </li>
+      </ul>
+
+
+      <div class="skill">
+
+        <div class="skill-header">
+          <span class="skill-name">Netzwerk / DNS / WireGuard</span>
+          <span class="skill-percent">40%</span>
+        </div>
+
+        <div class="skill-bar"
+             role="meter"
+             aria-valuemin="0"
+             aria-valuemax="100"
+             aria-valuenow="40">
+
+          <div class="skill-fill software"
+               style="width:40%"
+               data-width="40%"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- HARDWARE & ELEKTRONIK -->
+    <section class="card">
+
+      <h3>Hardware &amp; Elektronik</h3>
+
+      <p>
+        Praktische Erfahrungen bei der PC-Aufbereitung und
+        privaten Reparaturprojekten.
+      </p>
+
+      <ul>
+        <li>
+          PC-Komponenten bestimmen, Datenträger einrichten und
+          Hardwareprobleme eingrenzen.
+        </li>
+
+        <li>
+          Fehlersuche mit dem Multimeter und Untersuchung
+          beschädigter Verbindungen.
+        </li>
+
+        <li>
+          Erste Erfahrungen mit SMD / Micro-Soldering,
+          Lötpads und Leiterbahnreparaturen.
+        </li>
+      </ul>
+
+
+      <div class="skill">
+
+        <div class="skill-header">
+          <span class="skill-name">
+            Fehlersuche an elektronischen Bauteilen
+          </span>
+          <span class="skill-percent">50%</span>
+        </div>
+
+        <div class="skill-bar"
+             role="meter"
+             aria-valuemin="0"
+             aria-valuemax="100"
+             aria-valuenow="50">
+
+          <div class="skill-fill hardware"
+               style="width:50%"
+               data-width="50%"></div>
+
+        </div>
+
+      </div>
+
+
+      <div class="skill">
+
+        <div class="skill-header">
+          <span class="skill-name">Multimeter-Messungen</span>
+          <span class="skill-percent">40%</span>
+        </div>
+
+        <div class="skill-bar"
+             role="meter"
+             aria-valuemin="0"
+             aria-valuemax="100"
+             aria-valuenow="40">
+
+          <div class="skill-fill hardware"
+               style="width:40%"
+               data-width="40%"></div>
+
+        </div>
+
+      </div>
+
+
+      <div class="skill">
+
+        <div class="skill-header">
+          <span class="skill-name">SMD / Micro-Soldering</span>
+          <span class="skill-percent">60%</span>
+        </div>
+
+        <div class="skill-bar"
+             role="meter"
+             aria-valuemin="0"
+             aria-valuemax="100"
+             aria-valuenow="60">
+
+          <div class="skill-fill hardware"
+               style="width:60%"
+               data-width="60%"></div>
+
+        </div>
+
+      </div>
+
+
+      <div class="skill">
+
+        <div class="skill-header">
+          <span class="skill-name">Hardware-Diagnose</span>
+          <span class="skill-percent">55%</span>
+        </div>
+
+        <div class="skill-bar"
+             role="meter"
+             aria-valuemin="0"
+             aria-valuemax="100"
+             aria-valuenow="55">
+
+          <div class="skill-fill hardware"
+               style="width:55%"
+               data-width="55%"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SQL & ANWENDUNGSENTWICKLUNG -->
+    <section class="card">
+
+      <h3>SQL &amp; Anwendungsentwicklung</h3>
+
+      <p>
+        In diesen Bereichen sammle ich erste Einblicke und
+        baue mein Verständnis weiter auf.
+      </p>
+
+      <ul>
+        <li>
+          SQL: erste Einblicke in den Aufbau und die Struktur;
+          bisher wenig praktische Erfahrung.
+        </li>
+
+        <li>
+          HTML, CSS und JavaScript: praktische Arbeit
+          an dieser Bewerbungswebseite.
+        </li>
+
+        <li>
+          Der SQL-Lebenslauf verbindet eine gestalterische Idee
+          mit dem Kennenlernen typischer SQL-Schreibweisen.
+        </li>
+      </ul>
+
+
+      <div class="skill">
+
+        <div class="skill-header">
+          <span class="skill-name">HTML &amp; CSS</span>
+          <span class="skill-percent">50%</span>
+        </div>
+
+        <div class="skill-bar"
+             role="meter"
+             aria-valuemin="0"
+             aria-valuemax="100"
+             aria-valuenow="50">
+
+          <div class="skill-fill software"
+               style="width:50%"
+               data-width="50%"></div>
+
+        </div>
+
+      </div>
+
+
+      <div class="skill">
+
+        <div class="skill-header">
+          <span class="skill-name">SQL</span>
+          <span class="skill-percent">10%</span>
+        </div>
+
+        <div class="skill-bar"
+             role="meter"
+             aria-valuemin="0"
+             aria-valuemax="100"
+             aria-valuenow="10">
+
+          <div class="skill-fill software"
+               style="width:10%"
+               data-width="10%"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ARBEITSWEISE -->
+    <section class="card">
+
+      <h3>Arbeitsweise</h3>
+
+      <p>
+        Neue Themen erschließe ich mir praxisnah und Schritt für Schritt.
+      </p>
+
+      <ul>
+        <li>
+          Symptome beschreiben, mögliche Ursachen eingrenzen,
+          Änderungen ausprobieren und das Ergebnis nachprüfen.
+        </li>
+
+        <li>
+          Bei Unsicherheiten recherchieren und Unterstützung einbeziehen.
+        </li>
+
+        <li>
+          Gelerntes an eigenen Systemen und praktischen Aufgaben anwenden.
+        </li>
+      </ul>
+
+    </section>
+
+  </div>
+
 </div>
 
-
-<div class="skills-overview">
-
-  <!-- WINDOWS & LINUX -->
-  <section class="card">
-    <h3>Windows &amp; Linux</h3>
-    <p>Praktische Erfahrungen beim Einrichten und Untersuchen von Systemen.</p>
-
-    <ul>
-      <li>Windows installieren und einrichten; Treiber- und Startprobleme untersuchen.</li>
-      <li>Linux installieren und einrichten; erste Arbeiten im Terminal und über SSH.</li>
-      <li>Fehlermeldungen auswerten und Änderungen schrittweise prüfen.</li>
-    </ul>
-
-    <div class="skill">
-      <div class="skill-header">
-        <span class="skill-name">Windows Troubleshooting</span>
-        <span class="skill-percent">80%</span>
-      </div>
-      <div class="skill-bar" role="meter"
-           aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
-        <div class="skill-fill software" data-width="80%"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-header">
-        <span class="skill-name">Linux</span>
-        <span class="skill-percent">40%</span>
-      </div>
-      <div class="skill-bar" role="meter"
-           aria-valuemin="0" aria-valuemax="100" aria-valuenow="40">
-        <div class="skill-fill software" data-width="40%"></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PROXMOX / SERVER -->
-  <section class="card">
-    <h3>Virtualisierung &amp; Serverdienste</h3>
-    <p>
-      Im eigenen Homelab lerne ich, virtuelle Systeme und Dienste einzurichten
-      und zu betreiben.
-    </p>
-
-    <ul>
-      <li>Proxmox, virtuelle Maschinen (VMs) und LXC-Container.</li>
-      <li>Backups, Speicherverwaltung und Fehlerbehebung.</li>
-      <li>Pi-hole, Jellyfin und Samba einrichten, aktualisieren und untersuchen.</li>
-    </ul>
-
-    <div class="skill">
-      <div class="skill-header">
-        <span class="skill-name">Proxmox / VMs / LXC</span>
-        <span class="skill-percent">45%</span>
-      </div>
-      <div class="skill-bar" role="meter"
-           aria-valuemin="0" aria-valuemax="100" aria-valuenow="45">
-        <div class="skill-fill software" data-width="45%"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-header">
-        <span class="skill-name">Serverdienste / Self-Hosting</span>
-        <span class="skill-percent">45%</span>
-      </div>
-      <div class="skill-bar" role="meter"
-           aria-valuemin="0" aria-valuemax="100" aria-valuenow="45">
-        <div class="skill-fill software" data-width="45%"></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- NETZWERK -->
-  <section class="card">
-    <h3>Netzwerk &amp; VPN</h3>
-    <p>
-      Grundlagen und praktische Erfahrungen aus der Arbeit am eigenen Netzwerk.
-    </p>
-
-    <ul>
-      <li>IP-Adressen, DNS und Verbindungen zwischen Geräten und Diensten.</li>
-      <li>WireGuard einrichten und Verbindungsprobleme untersuchen.</li>
-      <li>Ping und Traceroute; erste Einblicke in Routing und NAT.</li>
-    </ul>
-
-    <div class="skill">
-      <div class="skill-header">
-        <span class="skill-name">Netzwerk / DNS / WireGuard</span>
-        <span class="skill-percent">40%</span>
-      </div>
-      <div class="skill-bar" role="meter"
-           aria-valuemin="0" aria-valuemax="100" aria-valuenow="40">
-        <div class="skill-fill software" data-width="40%"></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- HARDWARE -->
-  <section class="card">
-    <h3>Hardware &amp; Elektronik</h3>
-    <p>
-      Praktische Erfahrungen bei der PC-Aufbereitung und privaten Reparaturprojekten.
-    </p>
-
-    <ul>
-      <li>PC-Komponenten bestimmen, Datenträger einrichten und Hardwareprobleme eingrenzen.</li>
-      <li>Fehlersuche mit dem Multimeter.</li>
-      <li>SMD / Micro-Soldering, Lötpads und Leiterbahnreparaturen.</li>
-    </ul>
-
-    <div class="skill">
-      <div class="skill-header">
-        <span class="skill-name">Fehlersuche an elektronischen Bauteilen</span>
-        <span class="skill-percent">50%</span>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-fill hardware" data-width="50%"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-header">
-        <span class="skill-name">Multimeter-Messungen</span>
-        <span class="skill-percent">40%</span>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-fill hardware" data-width="40%"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-header">
-        <span class="skill-name">SMD / Micro-Soldering</span>
-        <span class="skill-percent">60%</span>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-fill hardware" data-width="60%"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-header">
-        <span class="skill-name">Hardware-Diagnose</span>
-        <span class="skill-percent">55%</span>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-fill hardware" data-width="55%"></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ENTWICKLUNG -->
-  <section class="card">
-    <h3>SQL &amp; Anwendungsentwicklung</h3>
-    <p>
-      In diesen Bereichen sammle ich erste Einblicke und baue mein Verständnis weiter auf.
-    </p>
-
-    <ul>
-      <li>SQL: erste Einblicke in Aufbau und Struktur.</li>
-      <li>HTML, CSS und JavaScript durch die Arbeit an dieser Webseite.</li>
-      <li>SQL-Lebenslauf als gestalterisches Lernprojekt.</li>
-    </ul>
-
-    <div class="skill">
-      <div class="skill-header">
-        <span class="skill-name">HTML &amp; CSS</span>
-        <span class="skill-percent">50%</span>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-fill software" data-width="50%"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-header">
-        <span class="skill-name">SQL</span>
-        <span class="skill-percent">10%</span>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-fill software" data-width="10%"></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ARBEITSWEISE -->
-  <section class="card">
-    <h3>Arbeitsweise</h3>
-    <p>Neue Themen erschließe ich mir praxisnah und Schritt für Schritt.</p>
-
-    <ul>
-      <li>Symptome beschreiben und mögliche Ursachen eingrenzen.</li>
-      <li>Änderungen ausprobieren und Ergebnisse überprüfen.</li>
-      <li>Bei Unsicherheiten recherchieren und Unterstützung einbeziehen.</li>
-      <li>Gelerntes an eigenen Systemen und praktischen Aufgaben anwenden.</li>
-    </ul>
-  </section>
-
-</div>
-
-</div>
 
 <script src="scan.js"></script>
 <script src="skills.js"></script>
