@@ -591,6 +591,32 @@ border-color:transparent;
   line-height: 1.6;
 }
 
+.skills-overview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.skills-overview .card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-overview .card h3 {
+  margin-top: 0;
+}
+
+.skills-overview .skill:first-of-type {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.skills-overview .skill-bar {
+  overflow: hidden;
+}
+
 @media (max-width: 700px){
  .badge-grid{grid-template-columns:1fr;}
 }
@@ -724,6 +750,13 @@ grid-template-columns:1fr;
   .sql-card{
 	  margin:10px 0;
   }
+.skills-overview {
+  grid-template-columns: 1fr;
+ }
+
+.skills-overview .card {
+  margin: 0;
+ }
 }
  
 
