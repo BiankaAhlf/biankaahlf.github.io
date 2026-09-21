@@ -1,62 +1,90 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
- <meta name="viewport"content="width=device-width,initial-scale=1.0">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
  <meta charset="UTF-8">
- <title>Projekte</title>
+ <title>Projekte &amp; Praxis | Bianka Ahlf</title>
  <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="projects-page">
 <div class="bg-grid"></div>
 <div class="scan-layer"></div>
 <div class="page-content">
-
 <nav>
  <a href="index.html">Start</a>
  <a href="skills.html">Kenntnisse</a>
- <a class="active" href="projects.html">Projekte</a>
+ <a class="active" aria-current="page" href="projects.html">Projekte</a>
  <a href="sql-cv.html">SQL-CV</a>
 </nav>
-
 <div class="card">
- <h1>Projekte</h1>
- <p class="muted">Praktische Projekte zur Weiterentwicklung meiner IT-Kenntnisse.</p>
+ <h1>Projekte &amp; Praxis</h1>
+ <p class="muted">Hier zeige ich, womit ich mich praktisch beschäftige und woran ich lerne. Für meine zukünftige Umschulung suche ich weiterhin ein Praktikum.</p>
 </div>
-
-<div class="card">
- <h3> Portfolio Website (HTML & SCC)</h3>
- <p> Entwicklung einer eigenen Bewerbungswebsite mit Navigation,responsivem Layout und SQL-Code-Darstellung.</p>
+<section class="card">
+ <h3>Proxmox-Homelab</h3>
+ <p>An meinem eigenen Proxmox-Server sammle ich Erfahrungen mit Virtualisierung und dem Betrieb mehrerer Systeme.</p>
  <ul>
-  <li>Strukturierung mit HTML</li>
-  <li>Design mit CSS (Flexbox, Hover-Effekte)</li>
-  <li>Dark Theme mit CSS Variablen</li>
+  <li>Virtuelle Maschinen und LXC-Container einrichten und ausprobieren.</li>
+  <li>Mich mit Speicherverwaltung, Backups und Fehlerbehebung beschäftigen.</li>
+  <li>Linux-Systeme über Terminal und SSH verwalten und dabei mein Verständnis vertiefen.</li>
  </ul>
-</div>
-
-<div class="card">
+</section>
+<section class="card">
+ <h3>Netzwerk &amp; WireGuard</h3>
+ <p>Im eigenen Netzwerk beschäftige ich mich mit VPN-Verbindungen, DNS und systematischer Verbindungsdiagnose.</p>
+ <ul>
+  <li>WireGuard einrichten und die Erreichbarkeit von Geräten und Diensten prüfen.</li>
+  <li>Mit Ping und Traceroute Fehler eingrenzen.</li>
+  <li>Zusammenhänge zwischen IP-Adressen, Routing, NAT und DNS schrittweise nachvollziehen.</li>
+ </ul>
+</section>
+<section class="card">
+ <h3>Serverdienste &amp; Self-Hosting</h3>
+ <p>Pi-hole, Jellyfin und Samba nutze ich als praktische Lernprojekte im Homelab.</p>
+ <ul>
+  <li>Dienste installieren, konfigurieren und aktualisieren.</li>
+  <li>Bei Problemen Einstellungen und Fehlermeldungen untersuchen.</li>
+  <li>Das Zusammenspiel zwischen Server, Netzwerk und zugreifenden Geräten kennenlernen.</li>
+ </ul>
+</section>
+<section class="card">
+ <h3>PC-Aufbereitung im Schulungsraum</h3>
+ <p>Bei der praktischen Arbeit an Schulungsraum-PCs sammle ich Erfahrungen außerhalb meines Homelabs.</p>
+ <ul>
+  <li>Komponenten bestimmen und Datenträger einrichten.</li>
+  <li>Windows-Systeme einrichten und Hardware- sowie Treiberprobleme untersuchen.</li>
+  <li>Fehler schrittweise eingrenzen und die Funktion nach Änderungen prüfen.</li>
+ </ul>
+</section>
+<section class="card">
+ <h3>Bewerbungswebseite</h3>
+ <p>An dieser Webseite arbeite ich praktisch mit HTML, CSS und JavaScript.</p>
+ <ul>
+  <li>Inhalte und Navigation mit HTML strukturieren.</li>
+  <li>Ein responsives Layout mit dunklem Farbschema und CSS-Effekten gestalten.</li>
+  <li>Mit Scan-Animation und einem Buchstaben-Easter-Egg interaktive Elemente kennenlernen.</li>
+ </ul>
+</section>
+<section class="card">
  <h3>SQL-Lebenslauf</h3>
- <p>Kreative Darstellung meines Lebenslaufs als SQL-Datenmodell.</p>
+ <p>Mein Lebenslauf ist gestalterisch als SQL-Code aufgebaut. Das Projekt bietet mir erste Einblicke in die Struktur der Sprache.</p>
  <ul>
-  <li>CREATE TABLE</li>
-  <li>INSERT INTO</li>
-  <li>SELECT-Abfragen</li>
+  <li>Schreibweisen wie CREATE TABLE, INSERT INTO und SELECT kennenlernen.</li>
+  <li>Bisher wenig praktische SQL-Erfahrung; mein Schwerpunkt liegt zunächst auf dem Kennenlernen der Struktur.</li>
  </ul>
-</div>
-
-<div class="card">
- <h3>Elektronik-Reparatur (Privatprojekte)</h3>
- <p>Reparatur von Ladebuchsen und Leiterbahnen mit SMD-Technik.</p>
+</section>
+<section class="card">
+ <h3>Elektronik-Reparatur</h3>
+ <p>Private Reparaturprojekte geben mir erste praktische Erfahrungen mit Ladebuchsen, Lötpads und Leiterbahnen.</p>
  <ul>
-  <li>Fehlersuche mit Multimeter</li>
-  <li>Reparatur beschädigter Lötpads</li>
-  <li>Strukturierte Analyse von Schaltkreisen</li>
+  <li>Fehler mit dem Multimeter eingrenzen.</li>
+  <li>Beschädigte Lötverbindungen und Leiterbahnen untersuchen und Reparaturen erproben.</li>
+  <li>Dabei meine Fähigkeiten im Umgang mit SMD / Micro-Soldering weiterentwickeln.</li>
  </ul>
-</div>
-</div>
-</div>
+</section>
 
+</div>
 <script src="scan.js"></script>
-
 </body>
 </html>
+
