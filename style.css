@@ -437,16 +437,18 @@ code {
  box-shadow: 0 0 8px rgba(59,130,246,0.7), 0 0 16px rgba(59,130,246,0.5);
 }
 .skill:hover .skill-fill.hardware {
- box-shadow:0 0 22px rgba(59,130,246,0.95);
- transform: scaleX(1.02);
+  box-shadow: 0 0 22px rgba(34,197,94,0.95);
+  transform: scaleX(1.02);
+  transform-origin: left center;
 }
 .skill-fill.software {
  background: linear-gradient(90deg, #22c55e, #16a34a);
  box-shadow: 0 0 8px rgba(34,197,94,0.7), 0 0 16px rgba(34,197,94,0.5);
 }
 .skill:hover .skill-fill.software {
- box-shadow: 0 0 22px rgba(34,197,94,0.95);
- transform: scaleX(1.02);
+  box-shadow: 0 0 22px rgba(34,197,94,0.95);
+  transform: scaleX(1.02);
+  transform-origin: left center;
 }
 .skill.reveal {
  opacity:0;
