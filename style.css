@@ -578,7 +578,7 @@ border-color:transparent;
 
 .skills-overview .skill-bar {
   overflow: hidden;
-
+}
  @media (min-width:900px){
   .projects{
    grid-template-columns: 1fr 1fr;
