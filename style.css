@@ -446,7 +446,7 @@ code {
 }
 .skill:hover .skill-fill.software {
  box-shadow: 0 0 22px rgba(34,197,94,0.95);
- transform: translateX(8px);
+ transform: scaleX(1.02);
 }
 .skill.reveal {
  opacity:0;
